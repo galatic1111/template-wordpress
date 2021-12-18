@@ -3,6 +3,9 @@ tasks:
       docker-compose pull
   - command: |
       docker-compose up
+  - command: curl -fsSL https://deno.land/x/install/install.sh | sh &&
+             export DENO_INSTALL="/home/gitpod/.deno" &&
+             RUN export PATH="$DENO_INSTALL/bin:$PATH"
 
 vscode:
   extensions:
